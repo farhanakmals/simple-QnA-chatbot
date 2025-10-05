@@ -7,19 +7,23 @@ from langchain_core.messages import HumanMessage, AIMessage  # For message forma
 # --- 1. Page Configuration and Title ---
 
 # Set the title and a caption for the web page
-st.title("💬 LangGraph ReAct Chatbot")
-st.caption("A simple and friendly chat using LangGraph with Google's Gemini model")
+st.title("💬 A Simple Chatbot")
+st.caption("A simple and friendly chat using Google's Gemini model")
 
 # --- 2. Sidebar for Settings ---
 
 # Create a sidebar section for app settings using 'with st.sidebar:'
 with st.sidebar:
     # Add a subheader to organize the settings
-    st.subheader("Settings")
+    st.subheader("Hello!👋")
     
     # Create a text input field for the Google AI API Key.
     # 'type="password"' hides the key as the user types it.
-    google_api_key = st.text_input("Google AI API Key", type="password")
+    # google_api_key = st.text_input("Google AI API Key", type="password")
+    st.write("""
+        Website ini masih dalam tahap pengembangan sebagai media belajar saya.
+        Jadi, harap maklum kalau ada fitur yang belum berjalan sempurna ya 😄
+    """)
     
     # Create a button to reset the conversation.
     # 'help' provides a tooltip that appears when hovering over the button.
@@ -29,6 +33,7 @@ with st.sidebar:
 
 # Check if the user has provided an API key.
 # If not, display an informational message and stop the app from running further.
+google_api_key = 'AIzaSyD-i_OTvLPbrBM8XzHCmZWN6NALHmagk68'
 if not google_api_key:
     st.info("Please add your Google AI API key in the sidebar to start chatting.", icon="🗝️")
     st.stop()
