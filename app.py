@@ -33,7 +33,7 @@ with st.sidebar:
 
 # Check if the user has provided an API key.
 # If not, display an informational message and stop the app from running further.
-google_api_key = 'AIzaSyD-i_OTvLPbrBM8XzHCmZWN6NALHmagk68'
+google_api_key = 'AIzxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 if not google_api_key:
     st.info("Please add your Google AI API key in the sidebar to start chatting.", icon="🗝️")
     st.stop()
